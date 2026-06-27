@@ -236,12 +236,11 @@ grouping_consecutive_months as (
 )
 
 select client_id, contract_id, contracted_amount,  invoice_id, invoice_date, invoice_amount, total_consecutive_months 
-from grouping_consecutive_months where total_consecutive_months > 3;```
+from grouping_consecutive_months where total_consecutive_months > 3;
 
+```
 </details>
 
-
----
 
 # 🔥 SQL Concepts Used
 
@@ -256,7 +255,6 @@ from grouping_consecutive_months where total_consecutive_months > 3;```
 ✅ GROUP BY  
 ✅ Revenue Leakage Analysis
 
-
 ---
 
 # 📌 Real World Use Case
@@ -269,26 +267,4 @@ This type of query is used in:
 - Insurance systems
 - Cloud cost monitoring
 
-Example:
-
-A customer contract says:
-
-```
-Monthly Charge = ₹20,000
-```
-
-But billing system generated:
-
-```
-Jan → ₹15,000
-Feb → ₹12,000
-Mar → ₹10,000
-```
-
-Company lost:
-
-```
-₹23,000 revenue leakage
-```
-
-This query automatically detects such cases.
+---
